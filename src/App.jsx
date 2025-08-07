@@ -1,3 +1,4 @@
+import { Outlet } from "react-router"
 
 
 function App() {
@@ -5,10 +6,12 @@ function App() {
 
   return (
     <>
-      <h1>tailwind css</h1>
-      
+      <h1>navbar</h1>
+      <Outlet></Outlet>
+      <h1>Footer</h1>
+     
     </>
-  )
+  );
 }
 
 export default App
