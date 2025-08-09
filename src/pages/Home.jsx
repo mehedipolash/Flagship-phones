@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Hero from '../Components/Hero';
 import PhonesContainer from '../Components/PhonesContainer';
 import { useLoaderData } from 'react-router';
 
 const Home = () => {
-  //data
+  // Data from loader
   const data = useLoaderData();
-  console.log(data);
+
+  // State for displayed phones
+  const [phones, setPhones] = useState(data);
+
+  const handleSearch = (e, text) => {
+    e.preventDefault();
+    const searchedPhones = data.filter(
+      phone =>
+        phone.name.toLowerCase().includes(text.toLowerCase()) ||
+        phone.brand.toLowerCase().includes(text.toLowerCase())
+    );
+    setPhones(searchedPhones);
+  };
+
   return (
     <div>
-      <Hero></Hero>
-      <PhonesContainer phones={data}></PhonesContainer>
+      <Hero handleSearch={handleSearch} />
+      <PhonesContainer phones={phones} />
     </div>
   );
 };
