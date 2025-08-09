@@ -34,7 +34,7 @@ const Navbar = () => {
           >
             <li>
               <NavLink
-                className={({ isActive }) => (isActive ? 'text-red-700' : '')}
+                className={({ isActive }) => (isActive ? 'text-lime-600' : '')}
                 to="/"
               >
                 Home
@@ -44,7 +44,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/about"
-                className={({ isActive }) => (isActive ? 'text-red-700' : '')}
+                className={({ isActive }) => (isActive ? 'text-lime-600' : '')}
               >
                 About
               </NavLink>
@@ -52,7 +52,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/cart"
-                className={({ isActive }) => (isActive ? 'text-red-700' : '')}
+                className={({ isActive }) => (isActive ? 'text-lime-600' : '')}
               >
                 <MdShoppingCart size={20} />
               </NavLink>
@@ -60,7 +60,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/favourites"
-                className={({ isActive }) => (isActive ? 'text-red-700' : '')}
+                className={({ isActive }) => (isActive ? 'text-lime-600' : '')}
               >
                 <MdBookmarkAdd size={20} />
               </NavLink>

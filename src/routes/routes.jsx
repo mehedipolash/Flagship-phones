@@ -15,6 +15,7 @@ export const router = createBrowserRouter([
       {
         path: '/',
         Component: Home,
+        loader:()=> fetch('phones.json')
       },
       {
         path: '/favourites',
