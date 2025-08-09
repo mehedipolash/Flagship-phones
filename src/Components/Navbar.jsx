@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router';
-import { MdShoppingCart,MdBookmarkAdd  } from 'react-icons/md';
+import { MdShoppingCart, MdBookmarkAdd } from 'react-icons/md';
 
 const Navbar = () => {
   return (
-    <div className="navbar p-0 bg-base-100 shadow-sm">
+    <div className="navbar p-0 bg-base-100 shadow-sm  mx-auto px-8 md:px-12 lg:px-16 xl:px-20">
       <div className="navbar-start">
         <div className="dropdown">
           <div
@@ -34,9 +34,7 @@ const Navbar = () => {
           >
             <li>
               <NavLink
-                className={({ isActive }) =>
-                  isActive ? 'text-indigo-800' : ''
-                }
+                className={({ isActive }) => (isActive ? 'text-red-700' : '')}
                 to="/"
               >
                 Home
@@ -46,9 +44,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/about"
-                className={({ isActive }) =>
-                  isActive ? 'text-indigo-800' : ''
-                }
+                className={({ isActive }) => (isActive ? 'text-red-700' : '')}
               >
                 About
               </NavLink>
@@ -56,9 +52,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/cart"
-                className={({ isActive }) =>
-                  isActive ? 'text-indigo-800' : ''
-                }
+                className={({ isActive }) => (isActive ? 'text-red-700' : '')}
               >
                 <MdShoppingCart size={20} />
               </NavLink>
@@ -66,9 +60,7 @@ const Navbar = () => {
             <li>
               <NavLink
                 to="/favourites"
-                className={({ isActive }) =>
-                  isActive ? 'text-indigo-800' : ''
-                }
+                className={({ isActive }) => (isActive ? 'text-red-700' : '')}
               >
                 <MdBookmarkAdd size={20} />
               </NavLink>
@@ -84,7 +76,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">
           <li>
             <NavLink
-              className={({ isActive }) => (isActive ? 'text-indigo-800' : '')}
+              className={({ isActive }) => (isActive ? 'text-lime-600' : '')}
               to="/"
             >
               Home
@@ -94,7 +86,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/about"
-              className={({ isActive }) => (isActive ? 'text-indigo-800' : '')}
+              className={({ isActive }) => (isActive ? 'text-lime-600' : '')}
             >
               About
             </NavLink>
@@ -102,7 +94,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/cart"
-              className={({ isActive }) => (isActive ? 'text-indigo-800' : '')}
+              className={({ isActive }) => (isActive ? 'text-lime-600' : '')}
             >
               <MdShoppingCart size={20} />
             </NavLink>
@@ -110,7 +102,7 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/favourites"
-              className={({ isActive }) => (isActive ? 'text-indigo-800' : '')}
+              className={({ isActive }) => (isActive ? 'text-lime-600' : '')}
             >
               <MdBookmarkAdd size={20} />
             </NavLink>
