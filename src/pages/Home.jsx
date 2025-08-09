@@ -12,6 +12,9 @@ const Home = () => {
 
   const handleSearch = (e, text) => {
     e.preventDefault();
+    if (text === '') {
+      setPhones(searchedPhones);
+    }
     const searchedPhones = data.filter(
       phone =>
         phone.name.toLowerCase().includes(text.toLowerCase()) ||

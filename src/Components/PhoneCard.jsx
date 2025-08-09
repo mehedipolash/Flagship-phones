@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const PhoneCard = ({ phone }) => {
-  const {name,description,image} = phone || {};
+  const {name,description,image,id} = phone || {};
   return (
     <div className="card bg-base-100  shadow-sm">
       <figure>
@@ -14,7 +14,7 @@ const PhoneCard = ({ phone }) => {
         <div className="card-actions justify-end">
           {/* btn from tailwindcss btns */}
 
-          <Link to="/phone-details">
+          <Link to={`/phone-details/${id}`}>
             <button
               href="#_"
               className="relative inline-block text-lg group cursor-pointer"

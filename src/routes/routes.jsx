@@ -15,8 +15,8 @@ export const router = createBrowserRouter([
       {
         path: '/',
         Component: Home,
-        hydrateFallbackElement:<p>Please wait...</p>,
-        loader:()=> fetch('phones.json')
+        hydrateFallbackElement: <p>Please wait...</p>,
+        loader: () => fetch('../phones.json'),
       },
       {
         path: '/favourites',
@@ -27,12 +27,14 @@ export const router = createBrowserRouter([
         Component: About,
       },
       {
-        path: 'phone-details',
+        path: 'phone-details/:jhankar',   //jhankar is id actually
         Component: PhoneDetails,
+        hydrateFallbackElement: <p>Please wait...</p>,
+        loader: () => fetch('../phones.json'), //../ for dynamic routes path
       },
       // {
       //   path: '*',
-      //   Component: ErrorPage,   
+      //   Component: ErrorPage,
       // },
     ],
   },
