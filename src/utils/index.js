@@ -18,3 +18,10 @@ export const addFavorite = phone => {
 };
 
 
+
+export const removeFavourite = (id) => {
+  const favourites = getFavourites();
+  const remainingFavourites = favourites.filter(phone => phone.id !== id)
+  localStorage.setItem('favourites', JSON.stringify(remainingFavourites));
+}
+

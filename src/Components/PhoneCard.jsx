@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { MdDeleteForever } from 'react-icons/md';
 
-const PhoneCard = ({ phone }) => {
-  const {name,description,image,id} = phone || {};
+const PhoneCard = ({ phone, deletable, handleDelete }) => {
+  const { name, description, image, id } = phone || {};
   return (
     <div className="card bg-base-100  shadow-sm">
       <figure>
@@ -32,6 +33,18 @@ const PhoneCard = ({ phone }) => {
           </Link>
         </div>
       </div>
+      {/* remove btn */}
+      {deletable && (
+        <div
+          onClick={() => handleDelete(id)}
+          className="absolute -top-2 -right-2 cursor-pointer group"
+        >
+          <MdDeleteForever
+            className="text-gray-400 group-hover:text-red-600 transition-colors duration-300 bg-black hover:bg-yellow-200 rounded-2xl"
+            size={28}
+          />
+        </div>
+      )}
     </div>
   );
 };
