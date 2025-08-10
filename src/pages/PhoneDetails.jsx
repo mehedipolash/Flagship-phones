@@ -15,7 +15,7 @@ const PhoneDetails = () => {
   if (!singlePhone) {
     return (
       <p className="text-center py-20 text-xl font-semibold">
-        Phone not found.
+        Phone not found!
       </p>
     );
   }
